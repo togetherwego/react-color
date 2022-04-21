@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.guessColor {
+  width: 10em;
+  height: 10em;
+  align-items: center;
+  border: 2px solid black;
+  justify-content: center; 
+  display: flex;
+  color: black;
+}
+
+.guessForm {
+  width: 10.5em;
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.guessForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.guessForm input[type='text'] {
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
