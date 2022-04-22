@@ -8,7 +8,7 @@ function GuessColor() {
         <label>Guess Color</label>
         <input
           id="guess"
-          type="text"
+          type="text" 
           role="searchBox"
           placeholder="guess color"
         />
