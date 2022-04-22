@@ -1,8 +1,14 @@
 import React from "react";
+import colorNames from 'colornames'
 
-const Input = ({ colorValue, setColorValue }) => {
+const Input = ({
+  colorValue,
+  setColorValue,
+  setHexValue,
+  isDarkText,
+  setisDarkText,
+}) => {
   return (
-    <div>
       <form onSubmit={(e) => e.preventDefault()} className="guessForm">
         <label>Add Color</label>
         <input
@@ -11,10 +17,13 @@ const Input = ({ colorValue, setColorValue }) => {
           placeholder="add color"
           required
           value={colorValue}
-          onChange={(e) => setColorValue(e.target.value)}
+          onChange={(e) => {
+            setColorValue(e.target.value);
+            setHexValue(colorNames(e.target.value));
+          }}
         />
+        <button type="button" onClick={() => setisDarkText(!isDarkText)}> Toogle text color</button>
       </form>
-    </div>
   );
 };
 
