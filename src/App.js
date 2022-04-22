@@ -1,11 +1,17 @@
-import './App.css';
-import GuessColor from './GuessColor';
+import "./App.css";
+import Input from "./Input";
+import Square from "./Square";
+import { useState } from "react";
 
 function App() {
+  const [colorValue, setColorValue] = useState('');
+
   return (
     <div className="App">
       <header className="App-header">
-        <GuessColor/>
+        <Square colorValue={colorValue} />
+        <Input colorValue={colorValue}
+        setColorValue={setColorValue} />
       </header>
     </div>
   );
