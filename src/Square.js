@@ -1,6 +1,6 @@
 import React from "react";
 
-function Square({ colorValue, hexValue, isDarkText, setisDarkText }) {
+function Square({ colorValue, hexValue, isDarkText }) {
   return (
     <section
       className="square"
